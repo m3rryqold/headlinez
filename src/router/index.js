@@ -16,18 +16,13 @@ export default new Router({
     },
     {
       path: '/sources',
-      children: [
-        {
-          path: 'sources',
-          name: 'sources-list',
-          component: list,
-        },
-        {
-          path: '/:source',
-          name: 'sources-home',
-          component: sources,
-        }
-      ]
+      name: 'sources-list',
+      component: list,
+    },
+    {
+      path: 'sources/:source',
+      name: 'sources-home',
+      component: sources,
     },
     {
       path: '/headlines',
